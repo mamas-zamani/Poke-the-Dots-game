@@ -110,8 +110,12 @@ class Game:
         self._bigger_dot.randomize()
         while self._smaller_dot.intersects(self._bigger_dot):
             self._bigger_dot.randomize()
-        self._small_dot = Dot('red', [self._smaller_dot._center[0],self._smaller_dot._center[1]], 30, [1,2], self._window)
-        self._big_dot = Dot('blue', [self._bigger_dot._center[0],self._bigger_dot._center[1]], 40, [2,1], self._window)
+        v = [0,0]
+        v[0] = self._small_dot._velocity[0] 
+        v[1] = self._small_dot._velocity[1] 
+        
+        self._small_dot = Dot('red', [self._smaller_dot._center[0],self._smaller_dot._center[1]], 30,[v[0],v[1]], self._window)
+        self._big_dot = Dot('blue', [self._bigger_dot._center[0],self._bigger_dot._center[1]], 40, [v[1],v[0]], self._window)
 
     def draw(self):
         # Draw all game objects.
@@ -206,7 +210,7 @@ class Dot:
     def increase_speed(self):
         # Increase speed per 5 second passed
         for index in range(0, 2):
-            self._velocity[index] = self._velocity[index] * 1.1
+            self._velocity[index] = self._velocity[index] * 1.12
             # print ("speed increased")
 
     def move(self):
