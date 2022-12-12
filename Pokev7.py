@@ -13,7 +13,7 @@ import pygame
 from pygame import QUIT, Color, MOUSEBUTTONUP
 from pygame.time import Clock, get_ticks
 from pygame.event import get as get_events
-from pygame.draw import circle as draw_circle
+# from pygame.draw import circle as draw_circle
 
 cat = pygame.image.load('cato.png')
 cat = pygame.transform.scale(cat, (62,62))
