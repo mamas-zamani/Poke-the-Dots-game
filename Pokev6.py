@@ -1,4 +1,4 @@
-# Poke The Dots Version 5
+# Poke The Dots Version 6
 # This is a graphical game where two dots move around
 # the screen, bouncing off the edges. The user tries 
 # to prevent the dots from colliding by pressing and 
